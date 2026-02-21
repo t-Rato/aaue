@@ -1,0 +1,158 @@
+.footer {
+    background-color: #000000;
+    color: #a7a7a7;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+    width: 100%;
+    min-height: 300px;
+
+    padding: 60px 100px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+}
+
+.footer-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+
+    width: 100%;
+    max-width: 1200px;
+}
+
+.footer .v-divider {
+    background-color: #a7a7a7;
+
+    width: 1px;
+    height: 140px;
+
+    margin-left: 35px;
+}
+
+.h-divider {
+    background-color: #a7a7a7;
+
+    width: 100%;
+    height: 1px;
+}
+
+.footer .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .logo img {
+    height: 160px;
+    width: auto;
+    
+    object-fit: contain;
+
+    filter: invert(0.5);
+}
+
+.footer h2 {
+    font-size: 32px;
+    font-weight: 500;
+
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.footer .contact-us {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    min-width: 280px;
+    width: fit-content;
+
+}
+
+.footer .info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.footer .info .information {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer .info .information p {
+    margin: 0;
+}
+
+.footer .social {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+
+    width: 100%;
+
+}
+
+.footer .social .media {
+    color: #a7a7a7;
+
+    border: 1px solid #a7a7a7; 
+    border-radius: 50%;
+
+    padding: 10px;
+
+    transition: all 0.3s ease;
+}
+
+.footer .social .media:hover {
+    color: #ffffff;
+    border-color: #ffffff;
+
+    transform: translateY(-5px);
+}
+
+.footer .social .media svg {
+    width: 30px;
+    height: 30px;
+
+    transition: all 0.3s ease;
+}
+
+.footer .social .media:hover svg {
+    fill: #ffffff;
+
+    border-color:#ffffff;
+}
+
+.footer .social .media.fb:hover {
+    background-color: #1877f2;
+}
+
+.footer .social .media.inst:hover {
+    background-color: #d6249f;
+}
+
+.footer .social .media.x:hover {
+    background-color: #000000;
+}
+
+.footer .social .media.in:hover {
+    background-color: #0a66c2;
+}
+
+.footer .rights {
+    margin-top: 0;
+
+    font-size: 12px;
+}

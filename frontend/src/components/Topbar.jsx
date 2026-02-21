@@ -1,0 +1,62 @@
+import "./Topbar.css"
+
+import Logo from "../assets/Logo.png";
+
+import { useNavigate } from "react-router-dom";
+
+function Topbar() {
+
+    const navigate = useNavigate();
+
+    return (
+        <div className="topbar">
+            <div className="AAUE" onClick={() => navigate("/")}>
+                <img src={Logo} alt="Logo" className="logo"/>
+                <h1>AAUE</h1>
+            </div>
+
+            <div className="pages">
+                <div className="item" onClick={() => navigate("/noticias")}>
+                    <p>Notícias</p>                    
+                </div>
+
+                <div className="item">
+                    <p>Associação</p>
+
+                    <div className="dp">
+                        <p>Presidência</p>
+                        <p>Gabinete de Apoio à Presidência</p>
+                        <p>Setores</p>
+                        <p>Secções Autónomas</p>
+                        <p>Assembleia Magna</p>
+                        <p>Conselho Fiscal</p>
+                        <p>Sobre Nós</p>
+                        <p>Estatutos</p>
+                        <p>Guia do Estudante</p>
+                    </div>
+                </div>
+
+                <div className="item">
+                    <p>Plataformas</p>
+
+                    <div className="dp">
+                        <p>Portal do Alojamento</p>
+                        <p>Desporto</p>
+                    </div>
+                </div>
+
+                <div className="item">
+                    <p>Outros</p>
+
+                    <div className="dp">
+                        <p>Serviços</p>
+                        <p>Denúncias</p>
+                        <p>Contactos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+}
+
+export default Topbar;
