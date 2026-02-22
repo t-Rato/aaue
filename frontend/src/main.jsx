@@ -1,10 +1,11 @@
-import { StrictMode } from 'react';
+import { StrictMode, useEffect } from 'react';
 import { createRoot } from 'react-dom/client';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 
 import "./index.css";
 
 import News from "./admin/News.jsx";
+import Assoc from "./admin/Assoc.jsx";
 
 import Menu from "./pages/Menu.jsx";
 import Noticias from "./pages/Noticias.jsx";
@@ -22,11 +23,23 @@ import Guias from './pages/associacao/Guias.jsx';
 import Topbar from './components/Topbar.jsx';
 import Footer from "./components/Footer.jsx";
 
+function ScrollToTop() {
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
+
+    return null;
+}
+
 createRoot(
     document.getElementById('root')
 ).render(
     <StrictMode>
         <BrowserRouter>
+            <ScrollToTop />
+
             <Topbar />
 
             <Routes>
@@ -44,6 +57,7 @@ createRoot(
                 <Route path="/associacao/guias" element={<Guias />} />
 
                 <Route path="/admin/news" element={<News />} />
+                <Route path="/admin/assoc" element={<Assoc />} />
             </Routes>
 
             <Footer />

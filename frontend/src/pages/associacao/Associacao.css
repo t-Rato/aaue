@@ -17,7 +17,7 @@
     font-weight: 500;
     font-size: 40px;
 
-    margin-bottom: 0;
+    margin-bottom: 10px;
 }
 
 .sub {
@@ -43,6 +43,8 @@
 
     margin-top: 20px;
     margin-bottom: 20px;
+
+    padding: 0 200px;
 }
 
 .card {
@@ -51,23 +53,32 @@
     box-shadow: 10px 10px 10px -5px #808080;
     border-radius: 10px;
 
-    height: 350px;
+    height: 300px;
+    width: 250px;
+
+    padding: 0;
 
     display: flex;
-    align-items: center;
+    justify-content: center;
+    align-items: flex-end;
 
     position: relative;
 }
 
 .card img {
-    height: 300px;
+    width: 230px;
 
-    margin: 30px 10px;
+    border-radius: 10px 10px 0 0;
+
+    margin: 20px 0px 0 0px;
 
     display: block;
 }
 
 .desc {
+    border-bottom: 7px solid;
+    border-top: 7px solid;
+
     width: 100%;
     height: 80px;
     padding: 20px;
@@ -78,12 +89,14 @@
     justify-content: center;
 
     position: absolute;
-    bottom: 40px;
+    bottom: 20px;
 }
 
 .desc p {
     margin: 0;
     padding: 0;
+
+    text-align: center;
 
     line-height: 1.2;
 }
@@ -92,7 +105,7 @@
     color: #101010;
 
     font-weight: 700;
-    font-size: 22px;
+    font-size: 20px;
 }
 
 .cargo {
@@ -105,43 +118,38 @@
 .presi {
     background-color: #eccd1b;
 
-    border-bottom: 10px solid #dabb0d;
-    border-top: 10px solid #dabb0d;
+    border-color:#dabb0d;
 }
 
 .gap {
     background-color: #f74848;
 
-    border-bottom: 10px solid #da3232;
-    border-top: 10px solid #da3232;
+    border-color:#da3232;
 }
 
 .setores {
     background-color: #ff8c49;
 
-    border-bottom: 10px solid #ee8141;
-    border-top: 10px solid #ee8141;
+    border-color: #ee8141;
+
 }
 
 .seccoes {
     background-color: #2eaed4;
 
-    border-bottom: 10px solid #2c9dc0;
-    border-top: 10px solid #2c9dc0;
+    border-color: #2c9dc0;
 }
 
 .magna {
     background-color: #b3b3b3;
 
-    border-bottom: 10px solid #a0a0a0;
-    border-top: 10px solid #a0a0a0;
+    border-color: #a0a0a0;
 }
 
 .fiscal {
     background-color: #7ce679;
 
-    border-bottom: 10px solid #68ce64;
-    border-top: 10px solid #68ce64;
+    border-color: #68ce64;
 }
 
 .separation {
@@ -175,12 +183,10 @@
     flex-basis: 0;
 
     min-width: 0;
-
-    animation: fadeScale 0.5s ease;
 }
 
 .selecionado .card img {
-    height: 250px;
+    width: 230px;
 }
 
 .selecionado .equipa {

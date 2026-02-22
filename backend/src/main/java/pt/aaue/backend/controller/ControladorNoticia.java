@@ -16,6 +16,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
+import org.springframework.transaction.annotation.Transactional;
 
 @RestController
 @RequestMapping("/api/noticias")
@@ -25,17 +27,24 @@ public class ControladorNoticia {
     @Autowired
     private RepositorioNoticia repositorioNoticia;
 
+    @Transactional(readOnly = true)
     @GetMapping
     public List<Noticia> getNoticias() {
-        return repositorioNoticia.findAll();
+        return repositorioNoticia.findAllOrderByIdDesc();
     }
 
+    @Transactional(readOnly = true)
     @GetMapping(params = {"page", "size"})
     public List<Noticia> getNoticiasPaginadas(
             @RequestParam(defaultValue = "1") int page,
             @RequestParam(defaultValue = "5") int size) {
-        
-        Pageable pageable = PageRequest.of(page - 1, size);
+
+        Pageable pageable = PageRequest.of(
+            page - 1,
+            size,
+            Sort.by(Sort.Direction.DESC, "id")
+        );
+
         return repositorioNoticia.findAll(pageable).getContent();
     }
 

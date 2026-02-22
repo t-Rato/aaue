@@ -4,11 +4,14 @@ import bg from "../assets/menu/evora.jpg";
 import logo from "../assets/Logo.png";
 
 import { useState } from "react";
+import { useNavigate } from "react-router-dom"
 
 import { Globe, Scale, WalletMinimal, Network, CreditCard, ArrowRight } from 'lucide-react';
 
 function Menu() {
     const[active, setActive] = useState("presidencia");
+
+    const navigate = useNavigate();
 
     const buttonColors = {
         presidencia: "#eccd1b",
@@ -16,6 +19,14 @@ function Menu() {
         fiscal: "#7ce679",
         setores: "#ff8c49",
         seccoes: "#2eaed4"
+    };
+
+    const buttonLinks = {
+        presidencia: "/associacao/presidencia",
+        assembleia: "/associacao/magna",
+        fiscal: "/associacao/fiscal",
+        setores: "/associacao/setores",
+        seccoes: "/associacao/seccoes"
     };
 
     return (
@@ -116,7 +127,7 @@ function Menu() {
                     </div>
                 </div>
 
-                <button className="botao" style={{ backgroundColor: buttonColors[active] }}>
+                <button className="botao" style={{ backgroundColor: buttonColors[active] }} onClick={() => navigate(buttonLinks[active])}>
                     Ver equipa
                 </button>
             </div>
@@ -125,11 +136,11 @@ function Menu() {
                 <div className="text">
                     <h1>O QUE É A AAUE?</h1>
 
-                    <p>A Associação Académica da Universidade de Évora é uma organização sem fins lucrativos, não governamentale de carácter estudantil, pautando-se pelos princípios gerais básicos do movimento associativo: Democraticidade, Unicidade, Apartidarismo e Arreligiosidade.</p>
+                    <p>A Associação Académica da Universidade de Évora é uma organização sem fins lucrativos, não governamental e de carácter estudantil, pautando-se pelos princípios gerais básicos do movimento associativo: Democraticidade, Unicidade, Apartidarismo e Arreligiosidade.</p>
 
                     <p>Atualmente, a Associação Académica da Universidade de Évora encontra-se organizada em diversos grupos, passando a sua operacionalização pela Direção e Secções Autónomas, sendo que a Direção é constituído por Setores/Secções, diversificados e focados em áreas específicas de operacionalização e ação.</p>
 
-                    <button className="botao" style={{ backgroundColor:"#000000", color:"#ffffff" }}>
+                    <button className="botao" style={{ backgroundColor:"#000000", color:"#ffffff" }} onClick={() => navigate("/associacao/sobre")}>
                         Descobre mais
                         <ArrowRight size={18}/>
                     </button>

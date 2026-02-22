@@ -218,11 +218,11 @@
 .whoarewe .text {
     color: #161616;
 
-    flex: 5;
+    flex: 1;
 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .whoarewe .text h1 {
@@ -246,15 +246,15 @@
 }
 
 .whoarewe .image {
-    flex: 4;
+    flex: 1;
     display: flex;;
     justify-content: center;
     align-items: stretch;
 }
 
 .whoarewe .image img {
-    width: auto;
-    height: 100%;
+    width: 350px;
+    height: auto;
 
     object-fit: contain;
 

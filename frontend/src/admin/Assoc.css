@@ -1,0 +1,275 @@
+.assoc-main {
+    display: flex;
+    flex-direction: row;
+
+    margin-top: 100px;
+    padding: 0px 50px;
+
+    gap: 30px;
+}
+
+.assoc-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    width: 250px;
+}
+
+.assoc-item {
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.assoc-item.ativo {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.assoc-content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.assoc-divider {
+    width: 1px;
+    background-color: #dddddd;
+}
+
+.assoc-conteudo {
+    flex: 1;
+}
+
+.assoc-membros h2 {
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.membros-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.membro-item {
+    background-color: #eeeeee;
+    border-radius: 12px;
+    padding: 10px 15px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    transition: all 0.3s ease;
+}
+
+.membro-item:hover {
+    box-shadow: 0px 8px 20px -8px #797979;
+}
+
+.membro-info .nome {
+    font-weight: 600;
+    margin: 0;
+}
+
+.membro-info .cargo {
+    margin: 0;
+    font-size: 14px;
+    color: #555555;
+}
+
+.membro-acoes {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    cursor: pointer;   
+}
+
+.icon-membro {
+    transition: all 0.3s ease;
+}
+
+.icon-membro:hover {
+    transform: translateY(-2px);
+}
+
+.adicionar-membro {
+    background-color: #cbe4ff;
+
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 12px;
+    
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    transition: all 0.3s ease;
+}
+
+.adicionar-membro:hover {
+    background-color: #c1dfff;
+}
+
+.criar-subgrupo {
+    margin-top: 20px;
+    padding: 8px 14px;
+
+    border: none;
+    border-radius: 12px;
+
+    background-color: #68a3da;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    transition: all 0.3s ease;
+}
+
+.criar-subgrupo:hover {
+    background-color: #5996cf;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-color: #00000050;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal {
+    background-color: #ffffff;
+
+    padding: 0 25px 25px 25px;
+
+    border-radius: 16px;
+
+    width: 400px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal input {
+    padding: 8px;
+
+    border-radius: 8px;
+    border: 1px solid #cccccc;
+
+    font-family: 'Montserrat', sans-serif;
+}
+
+.modal button {
+    background-color: #68a3da;
+    color: #000000;
+
+    margin-top: 10px;
+    padding: 10px;
+
+    border: none;
+    border-radius: 10px;
+    
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.modal button:hover {
+    background-color: #5493ce;
+}
+
+.subgrupo-item {
+    background-color: #eeeeee;
+    border-radius: 12px;
+
+    padding: 10px 15px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 10px;
+
+    cursor: pointer;
+}
+
+.subgrupo-nome {
+    font-weight: 500;
+}
+
+.subgrupo-acoes {
+    display: flex;
+    gap: 10px;
+
+    cursor: pointer;
+}
+
+.criar-subgrupo-box {
+    margin-top: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.criar-subgrupo-box input {
+    padding: 8px;
+
+    border-radius: 8px;
+    border: 1px solid #cccccc;
+}
+
+.modal textarea{
+    background-color: #ffffff;
+
+    border-radius: 8px;
+    border: 1px solid #cccccc;
+    outline: none;
+
+    width: 100%;
+    min-height: 50px;
+    max-height: 200px;
+    resize: none;
+
+    overflow: auto;
+
+    padding: 4px 8px;
+
+    font-size: 13px;
+    font-family: 'Montserrat', sans-serif;
+
+    transition: all 0.5s ease;
+}
+
+.modal textarea::placeholder {
+    font-weight: 400;
+
+    margin: 0px;
+}
+
+.modal textarea:focus {
+    border: 1px solid #5f5f5f;
+    outline: none;
+}

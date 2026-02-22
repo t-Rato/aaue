@@ -77,9 +77,4 @@ public class Noticia {
     public String getImagemUrl() {
         return this.imagemUrl;
     }
-
-    @PrePersist
-    private void onCreate() {
-        this.data = LocalDate.now();
-    }
 }

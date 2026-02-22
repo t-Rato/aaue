@@ -82,9 +82,9 @@ function News() {
     };
 
     return (
-        <div className="main">
+        <div className="main-news">
             <div className="create">
-                <h3 className="title">Criar Notícia <Plus color="#437fb0"/> </h3>
+                <h3 className="title-news">Criar Notícia <Plus color="#437fb0"/> </h3>
 
                 <div className="forms">
                     <div className="lbl">
@@ -123,8 +123,8 @@ function News() {
 
             <div className="v-divider"></div>
 
-            <div className="delete">
-                <h3 className="title">Apagar Notícia <X color="#d6491e"/> </h3>
+            <div className="delete-news">
+                <h3 className="title-news">Apagar Notícia <X color="#d6491e"/> </h3>
 
                 {noticias.map(noticia => (
                     <div key={noticia.id} className="delete-item">
