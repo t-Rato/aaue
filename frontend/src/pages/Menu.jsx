@@ -13,7 +13,7 @@ function Menu() {
     const buttonColors = {
         presidencia: "#eccd1b",
         assembleia: "#b3b3b3",
-        fiscal: "#93ff8f",
+        fiscal: "#7ce679",
         setores: "#ff8c49",
         seccoes: "#2eaed4"
     };

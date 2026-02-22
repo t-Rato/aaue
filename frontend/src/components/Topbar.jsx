@@ -24,15 +24,15 @@ function Topbar() {
                     <p>Associação</p>
 
                     <div className="dp">
-                        <p>Presidência</p>
-                        <p>Gabinete de Apoio à Presidência</p>
-                        <p>Setores</p>
-                        <p>Secções Autónomas</p>
-                        <p>Assembleia Magna</p>
-                        <p>Conselho Fiscal</p>
-                        <p>Sobre Nós</p>
-                        <p>Estatutos</p>
-                        <p>Guia do Estudante</p>
+                        <p onClick={() => navigate("/associacao/presidencia")}>Presidência</p>
+                        <p onClick={() => navigate("/associacao/gap")}>Gabinete de Apoio à Presidência</p>
+                        <p onClick={() => navigate("/associacao/setores")}>Setores</p>
+                        <p onClick={() => navigate("/associacao/seccoes")}>Secções Autónomas</p>
+                        <p onClick={() => navigate("/associacao/magna")}>Assembleia Magna</p>
+                        <p onClick={() => navigate("/associacao/fiscal")}>Conselho Fiscal</p>
+                        <p onClick={() => navigate("/associacao/sobre")}>Sobre Nós</p>
+                        <p onClick={() => navigate("/associacao/estatutos")}>Estatutos</p>
+                        <p onClick={() => navigate("/associacao/guias")}>Guia do Estudante</p>
                     </div>
                 </div>
 

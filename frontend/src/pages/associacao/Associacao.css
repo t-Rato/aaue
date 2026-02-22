@@ -1,0 +1,299 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    margin-top: 100px;
+    padding: 0px 50px;
+}
+
+.titulo {
+    color: #101010;
+
+    text-decoration: underline #101010 solid 1.5px;
+    text-underline-offset: 6px;
+ 
+    font-weight: 500;
+    font-size: 40px;
+
+    margin-bottom: 0;
+}
+
+.sub {
+    color: #242424;
+
+    margin-top: 0;
+    margin-bottom: 0;
+
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.equipa {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+
+    width: 100%;
+    height: auto;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.card {
+    background-color: #e9e9e9;
+
+    box-shadow: 10px 10px 10px -5px #808080;
+    border-radius: 10px;
+
+    height: 350px;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+}
+
+.card img {
+    height: 300px;
+
+    margin: 30px 10px;
+
+    display: block;
+}
+
+.desc {
+    width: 100%;
+    height: 80px;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    bottom: 40px;
+}
+
+.desc p {
+    margin: 0;
+    padding: 0;
+
+    line-height: 1.2;
+}
+
+.nome {
+    color: #101010;
+
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.cargo {
+    color: #242424;
+
+    font-weight: 500;
+    font-size: 17px;
+}
+
+.presi {
+    background-color: #eccd1b;
+
+    border-bottom: 10px solid #dabb0d;
+    border-top: 10px solid #dabb0d;
+}
+
+.gap {
+    background-color: #f74848;
+
+    border-bottom: 10px solid #da3232;
+    border-top: 10px solid #da3232;
+}
+
+.setores {
+    background-color: #ff8c49;
+
+    border-bottom: 10px solid #ee8141;
+    border-top: 10px solid #ee8141;
+}
+
+.seccoes {
+    background-color: #2eaed4;
+
+    border-bottom: 10px solid #2c9dc0;
+    border-top: 10px solid #2c9dc0;
+}
+
+.magna {
+    background-color: #b3b3b3;
+
+    border-bottom: 10px solid #a0a0a0;
+    border-top: 10px solid #a0a0a0;
+}
+
+.fiscal {
+    background-color: #7ce679;
+
+    border-bottom: 10px solid #68ce64;
+    border-top: 10px solid #68ce64;
+}
+
+.separation {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+
+    width: 100%;
+
+    margin-bottom: 20px;
+}
+
+.lista {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+
+    flex: 4;
+    flex-basis: 0;
+
+    min-width: 0;
+    
+    margin: 35px 0;
+}
+
+.selecionado {
+    flex: 6;
+    flex-basis: 0;
+
+    min-width: 0;
+
+    animation: fadeScale 0.5s ease;
+}
+
+.selecionado .card img {
+    height: 250px;
+}
+
+.selecionado .equipa {
+    gap: 40px;
+}
+
+.selecionado h2 {
+    color: #101010;
+
+    text-decoration: none;
+
+    font-size: 30px;
+    font-weight: 500;
+
+    margin-bottom: 5px;
+}
+
+.selecionado p {
+    font-size: 14px;
+}
+
+.selecionado .cargo {
+    font-size: 13px;
+}
+
+.divider {
+    background-color: #dddddd;
+
+    width: 1px;
+    align-self: stretch;
+
+    margin: 20px 0;
+}
+
+.selec-item {
+    cursor: pointer;
+
+    font-size: 16px;
+
+    transition: all 0.3s ease;
+
+    padding-bottom: 4px;
+    margin: 0;
+}
+
+.selec-content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.selec-icon {
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.selec-item:hover .selec-icon, .selec-item.ativo .selec-icon {
+    transform: translateX(3px);
+}
+
+.selec-text {
+    position: relative;
+}
+
+.selec-text::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -4px;
+
+    width: 0%;
+    height: 2px;
+
+    background-color: #101010;
+
+    transition: width 0.3s ease;
+
+    transform: translateX(-50%);
+}
+
+.selec-item:hover .selec-text::after {
+    width: 100%;
+}
+
+.selec-item.ativo {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.selec-item.ativo .selec-text::after {
+    width: 100%;
+}
+
+.contacto {
+    border-top: 1px solid #dddddd;
+    
+    margin-top: 40px;
+    padding-top: 20px;
+    
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.contacto strong {
+    font-weight: 500;
+}
+
+@keyframes fadeScale {
+    from {
+        opacity: 0;
+        transform: scale(0.96);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
